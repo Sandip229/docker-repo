@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo su
 sudo apt get update
 sudo apt-get install docker.io -y
 sudo systemctl start docker
