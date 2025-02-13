@@ -1,0 +1,9 @@
+FROM ubuntu
+RUN apt update
+RUN apt-get install apache2 -y
+rm /var/www/html/index.html
+COPY index.html /var/www/html
+COPY home.html /var/www/html
+COPY about.html /var/www/html
+EXPOSE 80
+CMD ["apachectl","-D","FOREGROUND"]

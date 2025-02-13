@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+  - source: /index.html
+    destination: /home/ubuntu/app/
+    source: /home.html
+    destination: /home/ubuntu/app/
+    source: /about.html
+    destination: /home/ubuntu/app/
+    source: /Dockerfile
+    destination: /home/ubuntu/app/
+hooks:
+    AfterInstall:
+    - location: Scripts/sandip.sh
+      timeout: 300
+      runas: root
+  
